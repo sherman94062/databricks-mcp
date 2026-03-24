@@ -1,0 +1,18 @@
+{
+  "_comment": "Add this block to your claude_desktop_config.json mcpServers section. Run setup.sh to get paths auto-filled.",
+  "mcpServers": {
+    "databricks": {
+      "command": "/path/to/databricks-mcp/.venv/bin/python",
+      "args": ["-m", "databricks_mcp.server"],
+      "cwd": "/path/to/databricks-mcp",
+      "env": {
+        "DATABRICKS_MOCK": "true",
+        "_live_comment": "Set MOCK=false and fill these in when you have an account",
+        "DATABRICKS_HOST": "https://adb-XXXXXXXXXXXXXXXX.X.azuredatabricks.net",
+        "DATABRICKS_TOKEN": "dapi...",
+        "DATABRICKS_WAREHOUSE_ID": "your_sql_warehouse_id",
+        "DATABRICKS_CATALOG": "main"
+      }
+    }
+  }
+}
